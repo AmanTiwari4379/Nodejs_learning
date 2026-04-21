@@ -19,22 +19,19 @@ http.createServer((req, res) => {
             });
             req.on('end', ()=> {
                 let rawData = Buffer.concat(dataBody).toString();
-                
-                console.log(rawData);
-                // let readableData = querystring.parse(rawData);
-                // let dataString = "My name is "+ readableData.name+ " and my email id is "+ readableData.email; 
-                // console.log(dataString);
-                //fs.writeFileSync("text/"+readableData.name+".txt", dataString);
+                let readableData = querystring.parse(rawData);
+                let dataString = "My name is "+ readableData.name+ " and my email id is "+ readableData.email; 
+                // fs.writeFileSync("text/"+readableData.name+".txt", dataString);
                 // console.log('file created');
-                // fs.writeFile("text/" + readableData.name + ".txt", dataString, 'utf-8', (err)=>{
-                //     if(err){
-                //         res.end('Internal server error');
-                //         return false;
-                //     }else{
-                //         console.log('file created');
+                fs.writeFile("text/" + readableData.name + ".txt", dataString, 'utf-8', (err)=>{
+                    if(err){
+                        res.end('Internal server error');
+                        return false;
+                    }else{
+                        console.log('file created');
                         
-                //     }
-                // })
+                    }
+                })
             });
             res.write('<h2> Data Submitted</h2>')
         }
