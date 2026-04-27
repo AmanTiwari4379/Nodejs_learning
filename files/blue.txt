@@ -1,0 +1,1 @@
+this is a color. This line added using appendFileSync.
