@@ -1,0 +1,63 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.headingArea{
+    background-color: rgb(200, 229, 240);
+    height: 60px;
+    width: auto;
+    justify-items: center;
+}
+.heading{
+    padding-top: 12px;
+    font-size: 29px;
+    font-weight: 700;
+    color: rgb(0, 0, 0);
+}
+
+.textInput{
+    border: 2px solid black;
+    width: 400px;
+    height: 40px;
+    font-size: 17px;
+    border-radius: 18px;
+}
+
+.inputLayout{
+    justify-items: center;
+    margin: 0 auto;
+    margin-top: 40px;
+    height: 180px;
+    width: 700px;
+    padding: 20px;
+    box-shadow: 1px 1px 2px 1px;
+    border-radius: 8px;
+}
+
+.taskBtnArea{
+    margin-top: 49px;
+}
+
+.taskBtn{
+    font-size: 16px;
+    width: 85px;
+    height: 40px;
+    color: azure;
+    background: rgb(0, 0, 0);
+    border-radius: 17px;
+}
+
+.taskBtn:hover{
+    background: rgb(72, 70, 70);
+}
+
+.displayOutput{
+    justify-items: center;
+    margin-top: 90px;
+
+}
+
+#taskList{
+    font-size: 21px;
+}
